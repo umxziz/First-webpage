@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+}
+
+/* General styles end */
+.container {
+    /* max-width: 960px; */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f2327;
+    padding-block: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#toggler,
+.navbar label {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #toggler:checked~.menu {
+        max-height: 100%;
+    }
+}
+
+.footer {
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+}
+
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    overflow: auto;
+    resize: horizontal;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+
+.footer__title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__list-item {
+    list-style: none;
+}
+
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+
+.footer__list-link:hover {
+    color: #fff;
+}
+
+.footer__divider {
+    margin-block: 2.5rem;
+    border: none;
+    border-top: 1px solid rgba(252, 255, 255, .1);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 13px;
+}
+
+.footer__bottom .footer__list {
+    flex-direction: row;
+}
